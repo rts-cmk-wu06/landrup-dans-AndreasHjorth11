@@ -16,6 +16,17 @@ module.exports = {
         Roboto: ["Roboto"],
         Racing: ["Racing Sans One"],
       },
+
+      animation: {
+        fade: 'fadeIn 1.5s ease-in-out'
+      },
+
+      keyframes: theme => ({
+        fadeIn: {
+          '0%': { backgroundColor: theme('colors.transparent') },
+          '100%': { backgroundColor: theme('colors.JapaneseViolet') },
+        }
+      })
     },
   },
   plugins: [],
