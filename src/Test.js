@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 const API = () => {
-  fetch("http://localhost:4000/api/v1/assets", {
-    method: "GET",
+  fetch("http://localhost:4000/api/v1/activities/2", {
+    "method": "GET"
   })
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
+  .then((response) => response.json())
+  .then((data) => console.log(data));
   return;
 };
 
