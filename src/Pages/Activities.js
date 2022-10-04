@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import Title from "../Components/Title";
+import Footer from "../Components/Footer";
 
 const LargeUrl = "http://localhost:4000/file-bucket/1632381947468tango.jpg";
 const LargeUrl2 = "http://localhost:4000/file-bucket/1632382020024fitnessdance.jpg";
@@ -86,9 +87,9 @@ const Activities = () => {
             </div>
           </div>
         </Link>
-        <div className="mt-[100px] mb-24">
+        <div className="mt-[100px] mb-[160px]">
           <Link to="#">
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-0">
               <div className="w-[356px] h-[344px] relative">
                 <img
                   src={img2}
@@ -109,6 +110,11 @@ const Activities = () => {
               </div>
             </div>
           </Link>
+        
+        <div>
+            <Footer />
+        </div>
+
         </div>
       </div>
     </div>

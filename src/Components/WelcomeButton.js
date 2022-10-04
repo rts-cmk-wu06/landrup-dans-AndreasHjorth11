@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 
 const WelcomeButton = () => {
-    return ( <div>
+  return (
+    <div>
+      <Link to="/aktiviteter">
         <div className="bg-JapaneseViolet w-[250px] h-[54px] rounded-xl font-bold text-lg animate-fade">
-          <Link to='/aktiviteter'>
-            <button className="mt-[11px] text-Plaster">Kom i gang</button>
-          </Link>
+          <button className="mt-[11px] text-Plaster">Kom i gang</button>
         </div>
-    </div> );
-}
- 
+      </Link>
+    </div>
+  );
+};
+
 export default WelcomeButton;
