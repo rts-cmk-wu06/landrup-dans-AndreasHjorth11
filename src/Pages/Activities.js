@@ -65,7 +65,7 @@ const Activities = () => {
         <Title text="Aktiviteter" />
       </div>
       <div className="mt-10">
-        <Link to="#">
+        <Link to="/aktivitet/1/detaljer">
           <div className="flex justify-center">
             <div className="w-[356px] h-[344px] relative">
               <img
