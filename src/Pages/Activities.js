@@ -88,7 +88,7 @@ const Activities = () => {
           </div>
         </Link>
         <div className="mt-[100px] mb-[160px]">
-          <Link to="#">
+          <Link to="/aktivitet/2/detaljer">
             <div className="flex justify-center mb-0">
               <div className="w-[356px] h-[344px] relative">
                 <img
