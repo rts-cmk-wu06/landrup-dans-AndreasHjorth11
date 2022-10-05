@@ -20,13 +20,10 @@ const Search = () => {
   const [maxAge2, setMaxAge2] = useState([]);
   const [img, setImg] = useState();
   const [img2, setImg2] = useState();
-  const [error, setError] = useState([]);
-  const [isLoaded, setIsLoaded] = useState("");
-  const [items, setitems] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/v1/activities")
+      .get("http://localhost:4000/api/v1/activities/1")
       .then((res) => {
         setActivity(res.data.name);
         setMinAge(res.data.minAge);
