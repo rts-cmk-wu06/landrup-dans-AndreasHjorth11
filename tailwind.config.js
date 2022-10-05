@@ -10,6 +10,8 @@ module.exports = {
         ObsidianShell: "#431567",
         LakeRetbaPink: "#e856eb",
         WarmPurple: "#913693",
+        ExplosiveGrey: "#C4C4C4",
+        MillionGrey: "#999999",
       },
 
       fontFamily: {

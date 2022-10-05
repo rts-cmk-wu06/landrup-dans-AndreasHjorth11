@@ -30,3 +30,8 @@ code {
   -webkit-text-fill-color: #e856eb;
   -webkit-text-stroke-width: 1px;
 }
+
+#inputID::placeholder {
+  color: #999999;
+  opacity: 1;
+}

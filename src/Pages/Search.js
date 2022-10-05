@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { Axios } from "axios";
 import { Link } from "react-router-dom";
+
+import { FiSearch } from "react-icons/fi";
 
 import Title from "../Components/Title";
 import Footer from "../Components/Footer";
 
 const LargeUrl = "http://localhost:4000/file-bucket/1632381947468tango.jpg";
-const LargeUrl2 = "http://localhost:4000/file-bucket/1632382020024fitnessdance.jpg";
+const LargeUrl2 =
+  "http://localhost:4000/file-bucket/1632382020024fitnessdance.jpg";
 
-const Activities = () => {
+const Search = () => {
   const [activity, setActivity] = useState([]);
   const [activity2, setActivity2] = useState([]);
   const [minAge, setMinAge] = useState([]);
@@ -25,9 +28,14 @@ const Activities = () => {
         setActivity(res.data.name);
         setMinAge(res.data.minAge);
         setMaxAge(res.data.maxAge);
+        
       })
-      .catch((err) => {});
+      .catch((err) => {
+        
+      });
   }, []);
+
+  
 
   useEffect(() => {
     axios
@@ -59,11 +67,27 @@ const Activities = () => {
     fetchImage2();
   }, []);
 
+
+  
+
   return (
     <div className="bg-JapaneseViolet w-full h-[800px] absolute overflow-x-auto">
       <div className="mt-10 ml-10">
-        <Title text="Aktiviteter" />
+        <Title text="Søg" />
       </div>
+
+      <div className="flex justify-center mt-10 items-center">
+        <div className="">
+          <input
+            type="text"
+            className=" h-[48px] w-[356px] bg-ExplosiveGrey opacity-30 relative pl-5 text-white "
+          ></input>
+        </div>
+        <div className="text-white text-2xl absolute right-0 mr-12">
+          <FiSearch />
+        </div>
+      </div>
+
       <div className="mt-10">
         <Link to="/aktivitet/1/detaljer">
           <div className="flex justify-center">
@@ -110,15 +134,14 @@ const Activities = () => {
               </div>
             </div>
           </Link>
-        
-        <div>
-            <Footer />
-        </div>
 
+          <div>
+            <Footer />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Activities;
+export default Search;
