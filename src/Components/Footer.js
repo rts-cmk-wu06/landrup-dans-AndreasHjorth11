@@ -14,7 +14,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className="border-2 border-black text-2xl rounded-full w-10 h-10 pl-[1.5%] pt-1">
-            <FiSearch />
+            <Link to="/search">
+              <FiSearch />
+            </Link>
           </div>
           <div className="border-2 border-black text-2xl rounded-full w-10 h-10 pl-[1.5%] pt-1">
             <FiCalendar />

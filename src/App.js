@@ -6,6 +6,7 @@ import Activities from "./Pages/Activities";
 import Details from "./Pages/Details";
 import Details2 from "./Pages/Details2";
 import Login from "./Pages/Login";
+import Search from "./Pages/Search";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/aktivitet/1/detaljer" element={<Details />} />
         <Route exact path="/aktivitet/2/detaljer" element={<Details2 />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/search" element={<Search />} />
       </Routes>
       <Test />
     </div>
