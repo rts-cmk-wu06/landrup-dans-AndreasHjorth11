@@ -14,6 +14,22 @@ const Details = () => {
   const [minAge, setMinAge] = useState([]);
   const [maxAge, setMaxAge] = useState([]);
   const [img, setImg] = useState();
+  const [name, setName] = useState();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = { name };
+
+    fetch("http://localhost:4000/api/v1/users/1/activities/1", {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjo3LCJ1c2VybmFtZSI6InVzZXIzIiwicGFzc3dvcmQiOiIkMmEkMTUkT01EVS44ZXRSaGY1N2ZEbVJudS9JdWhpbk5NUUpsSjh1amRVSm94RzRKWXZwdFVMNFdDZW0iLCJmaXJzdG5hbWUiOiJNYXJ0aW4iLCJsYXN0bmFtZSI6IlBvdWxzZW4iLCJhZ2UiOjIxLCJyb2xlIjoiZGVmYXVsdCIsImNyZWF0ZWRBdCI6IjIwMjEtMDktMjNUMDg6MTQ6MzAuNDA2WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDktMjNUMDg6MTQ6MzAuNDA2WiJ9LCJpYXQiOjE2MzIzOTM0MTUsImV4cCI6MTYzMjM5NzAxNX0.WNiaflNk5_6tTOvIaNrOO9XkdG70ptBNt6sJIUBhlJg",
+      },
+    })
+      .then((response) => console.log("Tilmeldt"))
+      .catch((err) => console.error(err));
+  };
 
   useEffect(() => {
     axios
@@ -48,7 +64,9 @@ const Details = () => {
 
       <div className="text-center flex justify-center">
         <div className="bg-JapaneseViolet w-[230px] h-[54px] rounded-xl font-bold text-lg absolute mt-[-80px] right-0 mr-6 drop-shadow-[0_9px_5px_rgba(0,0,0,0.35)]">
-          <button className="mt-[11px] text-Plaster">Tilmeld</button>
+          <form onSubmit={handleSubmit}>
+            <button className="mt-[11px] text-Plaster">Tilmeld</button>
+          </form>
         </div>
       </div>
 
