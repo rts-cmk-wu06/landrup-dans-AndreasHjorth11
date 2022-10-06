@@ -6,7 +6,7 @@ import Activities from "./Pages/Activities";
 import Details from "./Pages/Details";
 import Details2 from "./Pages/Details2";
 import Login from "./Pages/Login";
-import SearchOld from "./Pages/Search";
+import SearchOld from "./Old/Search";
 import { AuthContextProvider } from "./Context/Authcontext";
 import Search from "./Pages/SearchNew";
 

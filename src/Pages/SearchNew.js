@@ -113,7 +113,7 @@ export default function Search() {
                   <Link to="#">
                       <div className="flex justify-center mt-[30px] mb-[96px]">
                         <div className="w-[356px] h-[344px] relative">
-                          <img src={img}
+                          <img src={item.asset.url}
                             className="h-[120%] w-[100%] object-cover rounded-tr-[39px] rounded-tl-[39px] rounded-bl-[39px] z-0"
                           ></img>
 
@@ -142,7 +142,7 @@ export default function Search() {
                     <Link to="#">
                       <div className="flex justify-center mt-[30px] mb-[96px]">
                         <div className="w-[356px] h-[344px] relative">
-                          <img src={img}
+                          <img src={item.asset.url}
                             className="h-[120%] w-[100%] object-cover rounded-tr-[39px] rounded-tl-[39px] rounded-bl-[39px] z-0"
                           ></img>
 
