@@ -11,7 +11,9 @@ const LargeUrl = "http://localhost:4000/file-bucket/1632381947468tango.jpg";
 const LargeUrl2 =
   "http://localhost:4000/file-bucket/1632382020024fitnessdance.jpg";
 
-const Search = () => {
+const SearchOld = () => {
+  
+
   const [activity, setActivity] = useState([]);
   const [activity2, setActivity2] = useState([]);
   const [minAge, setMinAge] = useState([]);
@@ -28,14 +30,9 @@ const Search = () => {
         setActivity(res.data.name);
         setMinAge(res.data.minAge);
         setMaxAge(res.data.maxAge);
-        
       })
-      .catch((err) => {
-        
-      });
+      .catch((err) => {});
   }, []);
-
-  
 
   useEffect(() => {
     axios
@@ -67,9 +64,6 @@ const Search = () => {
     fetchImage2();
   }, []);
 
-
-  
-
   return (
     <div className="bg-JapaneseViolet w-full h-[800px] absolute overflow-x-auto">
       <div className="mt-10 ml-10">
@@ -78,10 +72,12 @@ const Search = () => {
 
       <div className="flex justify-center mt-10 items-center">
         <div className="">
-          <input
-            type="text"
-            className=" h-[48px] w-[356px] bg-ExplosiveGrey opacity-30 relative pl-5 text-white "
-          ></input>
+          <form>
+            <input
+              type="text"
+              className=" h-[48px] w-[356px] bg-ExplosiveGrey opacity-30 relative pl-5 text-white "
+            ></input>
+          </form>
         </div>
         <div className="text-white text-2xl absolute right-0 mr-12">
           <FiSearch />
@@ -144,4 +140,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchOld;

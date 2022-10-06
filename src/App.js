@@ -6,8 +6,9 @@ import Activities from "./Pages/Activities";
 import Details from "./Pages/Details";
 import Details2 from "./Pages/Details2";
 import Login from "./Pages/Login";
-import Search from "./Pages/Search";
+import SearchOld from "./Pages/Search";
 import { AuthContextProvider } from "./Context/Authcontext";
+import Search from "./Pages/SearchNew";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/aktivitet/1/detaljer" element={<Details />} />
           <Route exact path="/aktivitet/2/detaljer" element={<Details2 />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/searchold" element={<SearchOld />} />
           <Route exact path="/search" element={<Search />} />
         </Routes>
         <Test />
