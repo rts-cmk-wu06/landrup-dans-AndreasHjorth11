@@ -7,8 +7,8 @@ import { FiSearch } from "react-icons/fi";
 import Title from "../Components/Title";
 import Footer from "../Components/Footer";
 
-const LargeUrl = "http://localhost:4000/file-bucket/1632381947468tango.jpg";
-const LargeUrl2 = "http://localhost:4000/file-bucket/1632382020024fitnessdance.jpg";
+// const LargeUrl = "http://localhost:4000/file-bucket/1632381947468tango.jpg";
+// const LargeUrl2 = "http://localhost:4000/file-bucket/1632382020024fitnessdance.jpg";
 
 export default function Search() {
   const [APIData, setAPIData] = useState([]);
@@ -26,8 +26,8 @@ export default function Search() {
 //   const [minAge2, setMinAge2] = useState([]);
 //   const [maxAge, setMaxAge] = useState([]);
 //   const [maxAge2, setMaxAge2] = useState([]);
-  const [img, setImg] = useState();
-  const [img2, setImg2] = useState();
+  // const [img, setImg] = useState();
+  // const [img2, setImg2] = useState();
 
 //   useEffect(() => {
 //     axios
@@ -51,24 +51,24 @@ export default function Search() {
 //       .catch((err) => {});
 //   }, []);
 
-  const fetchImage = async () => {
-    const res = await fetch(LargeUrl);
-    const imageBlob = await res.blob();
-    const imageObjectUrl = URL.createObjectURL(imageBlob);
-    setImg(imageObjectUrl);
-  };
+  // const fetchImage = async () => {
+  //   const res = await fetch(LargeUrl);
+  //   const imageBlob = await res.blob();
+  //   const imageObjectUrl = URL.createObjectURL(imageBlob);
+  //   setImg(imageObjectUrl);
+  // };
 
-  const fetchImage2 = async () => {
-    const res = await fetch(LargeUrl2);
-    const imageBlob = await res.blob();
-    const imageObjectUrl = URL.createObjectURL(imageBlob);
-    setImg2(imageObjectUrl);
-  };
+  // const fetchImage2 = async () => {
+  //   const res = await fetch(LargeUrl2);
+  //   const imageBlob = await res.blob();
+  //   const imageObjectUrl = URL.createObjectURL(imageBlob);
+  //   setImg2(imageObjectUrl);
+  // };
 
-  useEffect(() => {
-    fetchImage();
-    fetchImage2();
-  }, []);
+  // useEffect(() => {
+  //   fetchImage();
+  //   fetchImage2();
+  // }, []);
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
